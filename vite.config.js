@@ -5,7 +5,13 @@ export default defineConfig({
   plugins: [svelte()],
   server: {
     port: 5173
-  }
+  },
+  base: process.env.BASE_PATH || '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  },
+  publicDir: 'public'
 });
 
 

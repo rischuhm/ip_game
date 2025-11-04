@@ -47,4 +47,31 @@ npm run build
 - Input validation ensures proper IP address format (four octets, 0-255 each)
 - Game completes after achieving 5 correct answers
 
+## Deployment to GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### Setup Instructions
+
+1. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Under "Source", select "GitHub Actions"
+
+2. **Push your code** to the `main` branch - the workflow will automatically:
+   - Build your Svelte app
+   - Deploy it to GitHub Pages
+   - Set the correct base path based on your repository name
+
+3. **Access your site**:
+   - If your repo is `username.github.io`, the site will be at `https://username.github.io`
+   - Otherwise, it will be at `https://username.github.io/repo-name`
+
+The workflow automatically determines the correct base path, so no manual configuration is needed!
+
+### Manual Deployment
+
+You can also manually trigger the deployment workflow:
+- Go to Actions tab in your repository
+- Select "Deploy to GitHub Pages" workflow
+- Click "Run workflow"
 
